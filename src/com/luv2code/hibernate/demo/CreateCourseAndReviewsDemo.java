@@ -45,6 +45,10 @@ public class CreateCourseAndReviewsDemo {
 			tempCourse.addReview(new Review("What a dumb course, you are an idiot!"));
 			
 			//save the course ... and leverage the cascade all
+			System.out.println("Saving the course");
+			System.out.println(tempCourse);
+			System.out.println(tempCourse.getReviews()); //Hey tempCourse please give me Reviews
+			session.save(tempCourse); // Hey session please save tempCourse
 			
 			//commit transaction
 			session.getTransaction().commit();
