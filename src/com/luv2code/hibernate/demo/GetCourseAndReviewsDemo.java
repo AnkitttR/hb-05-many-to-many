@@ -43,10 +43,14 @@ public class GetCourseAndReviewsDemo {
 			Course tempCourse = session.get(Course.class, theId); //Session will extract course from database, and store it to tempCourse variable
 			
 			//print the course
+			System.out.println("Deleting the course ...");
 			System.out.println(tempCourse);
 			
 			//print the course reviews
 			System.out.println(tempCourse.getReviews()); //Extract Reviews from tempCourse
+			
+			//delete the course
+			session.delete(tempCourse); //Session is ordering database to delete the course
 			
 			//commit transaction
 			session.getTransaction().commit();
