@@ -40,27 +40,13 @@ public class AddCoursesForMaryDemo {
 			//start a transaction
 			session.beginTransaction();
 						
-			//create a course
-			Course tempCourse = new Course("Pacman - How To Score One Million Points");
+			//get the student mary from database
 			
-			//save the course
-			System.out.println("\nSaving the course ...");
-			session.save(tempCourse); //Session says hey database please save tempCourse
-			System.out.println("Saved the course: " + tempCourse);
+			//create more courses
 			
-			//create the students
-			Student tempStudent1 = new Student("John","Doe","john@luv2code.com");
-			Student tempStudent2 = new Student("Mary","Public","mary@luv2code.com");
+			//add student to courses
 			
-			//add students to the course
-			tempCourse.addStudent(tempStudent1); //Hey tempCourse please add tempStudent1 to Course
-			tempCourse.addStudent(tempStudent2); //Hey tempCourse please add tempStudent2 to Course
-			
-			//save the students
-			System.out.println("\nSaving students ...");
-			session.save(tempStudent1); //Hey session please add tempStudent1 to database
-			session.save(tempStudent2); //Hey session please add tempStudent2 to database
-			System.out.println("Saved students: " + tempCourse.getStudents()); //Hey tempCourse please give me students
+			//save the courses
 			
 			//commit transaction
 			session.getTransaction().commit();
