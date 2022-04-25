@@ -39,15 +39,15 @@ public class GetCoursesForMaryDemo {
 			
 			//start a transaction
 			session.beginTransaction();
-						
-			//get the student mary from database
-			int studentId = 2;
-			Student tempStudent = session.get(Student.class, studentId);
+
+			//get the pacman course from db
+			int courseId = 10;
+			Course tempCourse = session.get(Course.class, courseId);
 			
-			System.out.println("\nLoaded student: " + tempStudent);
-			System.out.println("Course: " + tempStudent.getCourses());
+			//delete the course
+			System.out.println("Deleting course: " + tempCourse);
 			
-			
+			session.delete(tempCourse); //Hey session please delete tempCourse from database.
 			
 			//commit transaction
 			session.getTransaction().commit();
