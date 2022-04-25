@@ -39,10 +39,14 @@ public class GetCourseAndReviewsDemo {
 			session.beginTransaction();
 						
 			//get the course
+			int theId = 10;
+			Course tempCourse = session.get(Course.class, theId); //Session will extract course from database, and store it to tempCourse variable
 			
 			//print the course
+			System.out.println(tempCourse);
 			
 			//print the course reviews
+			System.out.println(tempCourse.getReviews()); //Extract Reviews from tempCourse
 			
 			//commit transaction
 			session.getTransaction().commit();
