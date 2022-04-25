@@ -11,7 +11,7 @@ import com.luv2code.hibernate.demo.entity.Review;
 import com.luv2code.hibernate.demo.entity.Student;
 
 
-public class GetCoursesForMaryDemo {
+public class DeletePacmanCourseDemo {
 
 	public static void main(String[] args) {
 		
