@@ -21,6 +21,7 @@ public class CreateCourseAndReviewsDemo {
 				                        .addAnnotatedClass(Instructor.class)
 				                        .addAnnotatedClass(InstructorDetail.class)
 				                        .addAnnotatedClass(Course.class)
+				                        .addAnnotatedClass(Review.class)
 				                        .buildSessionFactory();
 		
 		//create session
@@ -31,7 +32,8 @@ public class CreateCourseAndReviewsDemo {
 		
 		try {
 				
-			
+			//Imp Note: Course & Review ki values Main app mein hi create hogi & Connection(Mapping) 
+			//Wagareh ka kaam Course & Review apni apni classes mein karenge.
 			
 			//start a transaction
 			session.beginTransaction();
