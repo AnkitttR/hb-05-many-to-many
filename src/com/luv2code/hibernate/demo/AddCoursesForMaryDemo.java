@@ -41,6 +41,11 @@ public class AddCoursesForMaryDemo {
 			session.beginTransaction();
 						
 			//get the student mary from database
+			int studentId = 2;
+			Student tempStudent = session.get(Student.class, studentId);
+			
+			System.out.println("\nLoaded student: " + tempStudent);
+			System.out.println("Course: " + tempStudent.getCourses());
 			
 			//create more courses
 			
