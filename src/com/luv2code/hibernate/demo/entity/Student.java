@@ -34,8 +34,8 @@ public class Student {
 	
 	@ManyToMany(fetch=FetchType.LAZY, cascade= {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
 	@JoinTable(name="course_student", //JoinTable name is course_student
-	           joinColumns=@JoinColumn(name="course_id"),  //course_id is a column in JoinTable named "course_student"
-	           inverseJoinColumns = @JoinColumn(name="student_id")) //Inverse: is the other side... the Student
+	           joinColumns=@JoinColumn(name="student_id"),  //course_id is a column in JoinTable named "course_student"
+	           inverseJoinColumns = @JoinColumn(name="course_id")) //Inverse: is the other side... the Student
 	private List<Course> courses;
 	
 	public Student() {  //No Argument Constructor
