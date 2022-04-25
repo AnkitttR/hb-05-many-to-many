@@ -39,6 +39,8 @@ public class Course {
 	@JoinColumn(name="instructor_id")  //Course ka column hai instructor_id, jo point kar raha hai, towards primary key of instructor.
 	private Instructor instructor;  //Reference to Instructor class
 		
+	private List<Review> reviews;
+	
 	public Course() {  //No argument constructor
 			
 	}
