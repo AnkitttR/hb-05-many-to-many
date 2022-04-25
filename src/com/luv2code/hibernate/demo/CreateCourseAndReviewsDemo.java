@@ -7,6 +7,7 @@ import org.hibernate.cfg.Configuration;
 import com.luv2code.hibernate.demo.entity.Course;
 import com.luv2code.hibernate.demo.entity.Instructor;
 import com.luv2code.hibernate.demo.entity.InstructorDetail;
+import com.luv2code.hibernate.demo.entity.Review;
 
 
 public class CreateCourseAndReviewsDemo {
@@ -36,8 +37,12 @@ public class CreateCourseAndReviewsDemo {
 			session.beginTransaction();
 						
 			//create a course
+			Course tempCourse = new Course("Pacman - How To Score One Million Points");
 			
-			//add some reviews
+			//add some reviews //addReview method is mentioned in convenience method, that we have made earlier
+			tempCourse.addReview(new Review("Great course ... loved it!"));
+			tempCourse.addReview(new Review("Cool course, job well done"));
+			tempCourse.addReview(new Review("What a dumb course, you are an idiot!"));
 			
 			//save the course ... and leverage the cascade all
 			
